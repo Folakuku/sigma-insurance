@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import './Chatbot.css'; // Assuming you will create a CSS file for styling
+// import './Chatbot.css';
 
 const Chatbot = () => {
+    const chats: any[] = []
     const [isOpen, setIsOpen] = useState(false);
     const [userInput, setUserInput] = useState('');
-    const [chatHistory, setChatHistory] = useState([]);
+    const [chatHistory, setChatHistory] = useState(chats);
 
     const toggleChatbot = () => {
         setIsOpen(!isOpen);
     };
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e:any) => {
         setUserInput(e.target.value);
     };
 

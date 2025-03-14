@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/common/Header';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
@@ -13,13 +13,13 @@ const App = () => {
         <Router>
             <div>
                 <Header />
-                <Switch>
-                    <Route path="/" exact component={Login} />
-                    <Route path="/signup" component={SignUp} />
-                    <Route path="/dashboard" component={Dashboard} />
-                    <Route path="/data-analysis" component={DataAnalysis} />
-                    <Route path="/service-offerings" component={ServiceOfferings} />
-                </Switch>
+                <Routes>
+                    <Route path="/" element={<Login />} />
+                    <Route path="/signup" element={<SignUp />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/data-analysis" element={<DataAnalysis />} />
+                    <Route path="/service-offerings" element={<ServiceOfferings />} />
+                </Routes>
                 <Chatbot />
             </div>
         </Router>
