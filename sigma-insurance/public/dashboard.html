@@ -1,0 +1,142 @@
+<!-- filepath: c:\Users\Ugorumeyh\Desktop\si_bot\sigma-insurance\public\dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sigma Insurance CRM</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <!-- Chart.js for Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dashboard - Sigma Insurance CRM</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="buy-insurance.html">Buy Insurance</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="dashboard-container">
+            <!-- Overview Cards -->
+            <div class="overview-cards">
+                <div class="card glassmorphism">
+                    <div class="card-header">
+                        <span class="material-icons">people</span>
+                        <h3>Total Applications</h3>
+                    </div>
+                    <p id="total-applications">0</p>
+                </div>
+                <div class="card glassmorphism">
+                    <div class="card-header">
+                        <span class="material-icons">trending_up</span>
+                        <h3>Pending Reviews</h3>
+                    </div>
+                    <p id="pending-reviews">0</p>
+                </div>
+                <div class="card glassmorphism">
+                    <div class="card-header">
+                        <span class="material-icons">monetization_on</span>
+                        <h3>Total Coverage</h3>
+                    </div>
+                    <p id="total-coverage">$0</p>
+                </div>
+            </div>
+
+            <!-- File Upload Section -->
+            <div class="upload-section glassmorphism">
+                <h3>Upload Company Data</h3>
+                <form id="upload-form">
+                    <div class="form-group">
+                        <label for="company-data-file">Select CSV File:</label>
+                        <input type="file" id="company-data-file" name="company-data-file" accept=".csv" required>
+                    </div>
+                    <button type="submit" class="button">Upload Data</button>
+                </form>
+                <p id="upload-message" class="upload-message"></p>
+            </div>
+
+            <!-- Call to Action Section -->
+            <div class="cta-section glassmorphism">
+                <h3>Engage Your Clients</h3>
+                <p>Send targeted emails to your clients based on their engagement levels to boost conversions.</p>
+                <div class="cta-buttons">
+                    <button id="email-high-engagement" class="button">Email High Engagement Clients</button>
+                    <button id="email-medium-engagement" class="button">Email Medium Engagement Clients</button>
+                    <button id="email-low-engagement" class="button">Email Low Engagement Clients</button>
+                </div>
+                <p id="email-message" class="cta-message"></p>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-card glassmorphism">
+                    <h3>Insurance Types Distribution</h3>
+                    <canvas id="insurance-types-chart"></canvas>
+                </div>
+                <div class="chart-card glassmorphism">
+                    <h3>Applications by Industry</h3>
+                    <canvas id="industry-sector-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Recent Applications Table -->
+            <div class="table-section">
+                <h2>Recent Insurance Applications</h2>
+                <div class="table-controls">
+                    <input type="text" id="search-input" placeholder="Search applications..." class="search-bar">
+                    <select id="filter-status">
+                        <option value="all">All Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="approved">Approved</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                    <select id="filter-engagement">
+                        <option value="all">All Engagement</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <button id="toggle-engagement" class="button">Show Engagement Details</button>
+                </div>
+
+                <!-- Engagement Details Section -->
+                <div id="engagement-details" class="engagement-section" style="display: none;">
+                    <h3>Engagement Details</h3>
+                    <div id="engagement-content"></div>
+                </div>
+
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Company</th>
+                            <th>Insurance Type</th>
+                            <th>Coverage Amount</th>
+                            <th>Industry Sector</th>
+                            <th>Engagement Level</th>
+                            <th>Status</th>
+                            <th>Application Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dashboard-data">
+                        <!-- Data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Sigma Insurance. All rights reserved.</p>
+    </footer>
+    <script src="dashboard.js"></script>
+</body>
+</html>

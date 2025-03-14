@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Insurance CRM</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Sigma Insurance CRM</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="buy-insurance.html">Buy Insurance</a></li>
+                <li><button id="theme-toggle" class="nav-button">Toggle Theme</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="split-screen">
+            <div class="left-section">
+                <div class="content">
+                    <h2>Welcome to Sigma Insurance</h2>
+                    <p>Manage your clients, policies, claims, and reports efficiently with our CRM.</p>
+                    <a href="buy-insurance.html" class="button">Get Started</a>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <form>
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" name="login-email" required>
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" name="login-password" required>
+                        <button type="submit" class="button">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Sigma Insurance. All rights reserved.</p>
+    </footer>
+    <script src="bundle.js"></script>
+    <script src="theme-toggle.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!-- filepath: c:\Users\Ugorumeyh\Desktop\si_bot\sigma-insurance\public\buy-insurance.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Insurance - Sigma Insurance CRM</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <h1>Buy Insurance - Sigma Insurance CRM</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="buy-insurance.html">Buy Insurance</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Insurance Application Form</h2>
+            <div class="form-card glassmorphism">
+                <form id="buy-insurance-form">
+                    <!-- Personal Information Section -->
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="first-name">First Name:</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name:</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone-number">Phone Number:</label>
+                                <input type="tel" id="phone-number" name="phone-number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="date-of-birth">Date of Birth:</label>
+                                <input type="date" id="date-of-birth" name="date-of-birth" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Company Information Section -->
+                    <div class="form-section">
+                        <h3>Company Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="company-name">Company Name:</label>
+                                <input type="text" id="company-name" name="company-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="industry-sector">Industry Sector:</label>
+                                <select id="industry-sector" name="industry-sector">
+                                    <option value="">Select Sector</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="retail">Retail</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="company-size">Company Size:</label>
+                                <select id="company-size" name="company-size">
+                                    <option value="">Select Size</option>
+                                    <option value="1-10">1-10 employees</option>
+                                    <option value="11-50">11-50 employees</option>
+                                    <option value="51-200">51-200 employees</option>
+                                    <option value="201+">201+ employees</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Insurance Details Section -->
+                    <div class="form-section">
+                        <h3>Insurance Details</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="insurance-type">Insurance Type:</label>
+                                <select id="insurance-type" name="insurance-type" required>
+                                    <option value="">Select Type</option>
+                                    <option value="general-liability">General Liability</option>
+                                    <option value="property">Property</option>
+                                    <option value="workers-comp">Workers' Compensation</option>
+                                    <option value="professional-liability">Professional Liability</option>
+                                    <option value="cyber-insurance">Cyber Insurance</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="coverage-amount">Desired Coverage Amount:</label>
+                                <input type="number" id="coverage-amount" name="coverage-amount" min="0" placeholder="$" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="start-date">Preferred Start Date:</label>
+                                <input type="date" id="start-date" name="start-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="annual-revenue">Annual Revenue:</label>
+                                <input type="number" id="annual-revenue" name="annual-revenue" min="0" placeholder="$">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-section">
+                        <h3>Additional Information</h3>
+                        <div class="form-group">
+                            <label for="previous-insurance">Previous Insurance Provider (if any):</label>
+                            <input type="text" id="previous-insurance" name="previous-insurance">
+                        </div>
+                        <div class="form-group">
+                            <label for="claims-history">Claims History (last 5 years):</label>
+                            <textarea id="claims-history" name="claims-history" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="button">Submit Application</button>
+                    <div id="thank-you-message" style="display: none;">
+                        Thank you for reaching out to us!
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Sigma Insurance. All rights reserved.</p>
+    </footer>
+    <script src="buy-insurance.js"></script>
+</body>
+</html>

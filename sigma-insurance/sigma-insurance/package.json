@@ -1,0 +1,12 @@
+{
+  "name": "sigma-insurance",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.7",
+    "react-chatbot-kit": "^2.2.2",
+    "react-router-dom": "^7.3.0"
+  }
+}

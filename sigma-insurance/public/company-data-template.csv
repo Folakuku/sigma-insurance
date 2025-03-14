@@ -1,0 +1,6 @@
+firstName,lastName,companyName,insuranceType,coverageAmount,industrySector,engagementLevel,status,applicationDate
+John,Doe,Doe Enterprises,General Liability,500000,Technology,high,Pending,2025-01-15
+Jane,Smith,Smith Healthcare,Workers' Compensation,750000,Healthcare,medium,Approved,2025-01-10
+Alice,Johnson,Johnson Tech,Cyber Insurance,300000,Technology,low,Pending,2025-01-05
+Bob,Williams,Williams Retail,Property,600000,Retail,high,Approved,2025-01-20
+Emma,Brown,Brown Finance,Professional Liability,400000,Finance,medium,Rejected,2025-01-18
